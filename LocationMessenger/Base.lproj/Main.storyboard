@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocationMessenger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="udG-cn-KdM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7Q-uD-Wya">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epG-rb-umc">
+                                <rect key="frame" x="314" y="32" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.95209390862944165" green="0.95209390862944165" blue="0.95209390862944165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Button" image="location"/>
+                                <connections>
+                                    <action selector="returnToUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CTA-Q1-mfn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NZN-FD-rqj" firstAttribute="bottom" secondItem="h7Q-uD-Wya" secondAttribute="bottom" id="09H-eQ-HBa"/>
+                            <constraint firstItem="NZN-FD-rqj" firstAttribute="top" secondItem="h7Q-uD-Wya" secondAttribute="top" constant="20" id="JaU-IP-AnJ"/>
+                            <constraint firstItem="epG-rb-umc" firstAttribute="leading" secondItem="h7Q-uD-Wya" secondAttribute="trailing" constant="-61" id="JuK-dj-ceh"/>
+                            <constraint firstItem="h7Q-uD-Wya" firstAttribute="leading" secondItem="NZN-FD-rqj" secondAttribute="leading" id="ODg-D7-gLF"/>
+                            <constraint firstItem="epG-rb-umc" firstAttribute="trailing" secondItem="h7Q-uD-Wya" secondAttribute="trailing" constant="-21" id="abg-fO-k4G"/>
+                            <constraint firstItem="epG-rb-umc" firstAttribute="top" secondItem="h7Q-uD-Wya" secondAttribute="top" constant="32" id="rz0-dD-I0B"/>
+                            <constraint firstItem="NZN-FD-rqj" firstAttribute="trailing" secondItem="h7Q-uD-Wya" secondAttribute="trailing" id="wI5-YE-57y"/>
+                            <constraint firstItem="h7Q-uD-Wya" firstAttribute="top" secondItem="epG-rb-umc" secondAttribute="bottom" constant="-72" id="xCE-jC-O9K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NZN-FD-rqj"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="h7Q-uD-Wya" id="NlI-0X-hBm"/>
+                        <outlet property="setViewBtn" destination="epG-rb-umc" id="pxJ-yw-9kS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="aiG-R0-Hp3">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="auS-Fq-mhm"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="23.199999999999999" y="31.03448275862069"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location" width="30" height="30"/>
+    </resources>
+</document>
