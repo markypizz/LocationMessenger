@@ -202,14 +202,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LocationMessenger/Pods-LocationMessenger-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${PODS_ROOT}/SendBirdSDK/SendBirdSDK.framework",
+				"${PODS_ROOT}/SendBirdSDK/SendBirdSDK.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SendBirdSDK.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/SendBirdSDK.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);

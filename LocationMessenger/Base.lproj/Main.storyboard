@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,14 +34,29 @@
                                     <action selector="returnToUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CTA-Q1-mfn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7q-ci-OHa">
+                                <rect key="frame" x="16" y="597" width="343" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XZL-CJ-V71"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Join Group Test"/>
+                                <connections>
+                                    <action selector="JoinBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="woZ-NJ-fdc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NZN-FD-rqj" firstAttribute="bottom" secondItem="h7Q-uD-Wya" secondAttribute="bottom" id="09H-eQ-HBa"/>
+                            <constraint firstItem="Y7q-ci-OHa" firstAttribute="leading" secondItem="udG-cn-KdM" secondAttribute="leadingMargin" id="293-bC-uvV"/>
+                            <constraint firstAttribute="bottom" secondItem="Y7q-ci-OHa" secondAttribute="bottom" constant="20" symbolic="YES" id="56n-Od-p4K"/>
                             <constraint firstItem="NZN-FD-rqj" firstAttribute="top" secondItem="h7Q-uD-Wya" secondAttribute="top" constant="20" id="JaU-IP-AnJ"/>
                             <constraint firstItem="epG-rb-umc" firstAttribute="leading" secondItem="h7Q-uD-Wya" secondAttribute="trailing" constant="-61" id="JuK-dj-ceh"/>
                             <constraint firstItem="h7Q-uD-Wya" firstAttribute="leading" secondItem="NZN-FD-rqj" secondAttribute="leading" id="ODg-D7-gLF"/>
                             <constraint firstItem="epG-rb-umc" firstAttribute="trailing" secondItem="h7Q-uD-Wya" secondAttribute="trailing" constant="-21" id="abg-fO-k4G"/>
+                            <constraint firstItem="Y7q-ci-OHa" firstAttribute="centerX" secondItem="h7Q-uD-Wya" secondAttribute="centerX" id="awW-BP-vzb"/>
                             <constraint firstItem="epG-rb-umc" firstAttribute="top" secondItem="h7Q-uD-Wya" secondAttribute="top" constant="32" id="rz0-dD-I0B"/>
                             <constraint firstItem="NZN-FD-rqj" firstAttribute="trailing" secondItem="h7Q-uD-Wya" secondAttribute="trailing" id="wI5-YE-57y"/>
                             <constraint firstItem="h7Q-uD-Wya" firstAttribute="top" secondItem="epG-rb-umc" secondAttribute="bottom" constant="-72" id="xCE-jC-O9K"/>
@@ -48,17 +64,12 @@
                         <viewLayoutGuide key="safeArea" id="NZN-FD-rqj"/>
                     </view>
                     <connections>
+                        <outlet property="mainView" destination="udG-cn-KdM" id="j4m-AZ-7uU"/>
                         <outlet property="mapView" destination="h7Q-uD-Wya" id="NlI-0X-hBm"/>
                         <outlet property="setViewBtn" destination="epG-rb-umc" id="pxJ-yw-9kS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="aiG-R0-Hp3">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <viewLayoutGuide key="safeArea" id="auS-Fq-mhm"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="23.199999999999999" y="31.03448275862069"/>
         </scene>

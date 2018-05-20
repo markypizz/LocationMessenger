@@ -7,8 +7,10 @@ target 'LocationMessenger' do
 
   # Pods for LocationMessenger
   pod 'Firebase/Core'
-  pod 'Firebase/Messaging'
+  # pod 'Firebase/Messaging'
   pod 'Firebase/Database'
+  
+  pod 'SendBirdSDK'
 
 
 end
