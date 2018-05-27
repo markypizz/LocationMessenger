@@ -14,6 +14,7 @@
 		406B4F45513FA393149E2AE3 /* Pods_LocationMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C218DD7F850AD5ABB1EC01A9 /* Pods_LocationMessenger.framework */; };
 		5C27A2B720B0AA9A00D6C2B3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C27A2B620B0AA9A00D6C2B3 /* Launch Screen.storyboard */; };
 		5C27A2B920B0B40A00D6C2B3 /* DatabaseQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C27A2B820B0B40A00D6C2B3 /* DatabaseQuery.swift */; };
+		5C73230020BB239900D799CB /* OpenChannelChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7322FF20BB239900D799CB /* OpenChannelChattingViewController.swift */; };
 		5C92A52820B0C4DA0084BAA8 /* Location.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C92A52720B0C4DA0084BAA8 /* Location.png */; };
 		5C9F96BF20B1F2FF00AF4996 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C9F96BE20B1F2FF00AF4996 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		23C039F020795EFE003193E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C27A2B620B0AA9A00D6C2B3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5C27A2B820B0B40A00D6C2B3 /* DatabaseQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseQuery.swift; sourceTree = "<group>"; };
+		5C7322FF20BB239900D799CB /* OpenChannelChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenChannelChattingViewController.swift; sourceTree = "<group>"; };
 		5C92A52720B0C4DA0084BAA8 /* Location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Location.png; sourceTree = "<group>"; };
 		5C9F96BE20B1F2FF00AF4996 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75921672D5F0B899DFB44618 /* Pods-LocationMessenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationMessenger.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocationMessenger/Pods-LocationMessenger.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,17 +77,26 @@
 		23C039E320795EFB003193E3 /* LocationMessenger */ = {
 			isa = PBXGroup;
 			children = (
-				5C92A52620B0C4C80084BAA8 /* Icons */,
-				23C039E420795EFB003193E3 /* AppDelegate.swift */,
-				23C039E620795EFB003193E3 /* ViewController.swift */,
-				23C039E820795EFB003193E3 /* Main.storyboard */,
-				5C27A2B620B0AA9A00D6C2B3 /* Launch Screen.storyboard */,
+				5C73230120BB560B00D799CB /* Supporting Files */,
 				23C039EB20795EFE003193E3 /* Assets.xcassets */,
 				5C9F96BE20B1F2FF00AF4996 /* GoogleService-Info.plist */,
 				23C039F020795EFE003193E3 /* Info.plist */,
+				5C92A52620B0C4C80084BAA8 /* Icons */,
+				23C039E420795EFB003193E3 /* AppDelegate.swift */,
+				23C039E620795EFB003193E3 /* ViewController.swift */,
+				5C7322FF20BB239900D799CB /* OpenChannelChattingViewController.swift */,
+				23C039E820795EFB003193E3 /* Main.storyboard */,
+				5C27A2B620B0AA9A00D6C2B3 /* Launch Screen.storyboard */,
 				5C27A2B820B0B40A00D6C2B3 /* DatabaseQuery.swift */,
 			);
 			path = LocationMessenger;
+			sourceTree = "<group>";
+		};
+		5C73230120BB560B00D799CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		5C92A52620B0C4C80084BAA8 /* Icons */ = {
@@ -229,6 +240,7 @@
 			files = (
 				23C039E720795EFB003193E3 /* ViewController.swift in Sources */,
 				5C27A2B920B0B40A00D6C2B3 /* DatabaseQuery.swift in Sources */,
+				5C73230020BB239900D799CB /* OpenChannelChattingViewController.swift in Sources */,
 				23C039E520795EFB003193E3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

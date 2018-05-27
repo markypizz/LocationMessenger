@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Firebase
 import CoreLocation
 import SendBirdSDK
 
@@ -24,7 +25,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var locSet = false
     
     var currentChannel:SBDOpenChannel? = nil
-    
     
     let viewRadius: CLLocationDistance = 5000
     //---------------------------------------------
@@ -124,6 +124,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let confirmAction = UIAlertAction(title: "Enter", style: .default) { (_) in
             if let chosenName = alertController.textFields?[0].text {
                 self.userID = chosenName
+                self.connectAndTest()
             } else {
                 print("DEBUG: Could not unwrap optional")
             }
@@ -153,7 +154,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             return
         }
         
-        let CHANNEL_URL = "sendbird_open_channel_37525_28ea3f756f97ea683f1c72c49076ad9b985a7f84"
+        var channelURL = ""
+        
+        
+        //Code below is BROKEn **********************
         
         //Connect
         SBDMain.connect(withUserId: userID, completionHandler: { (user, error) in
@@ -167,12 +171,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 
             }
             //Enter channel
-            SBDOpenChannel.getWithUrl(CHANNEL_URL) { (channel, error) in
+            SBDOpenChannel.getWithUrl(channelURL) { (channel, error) in
                 if error != nil {
                     print("One")
                     NSLog("Error: %@", error!)
                     return
                 }
+                print(channelURL)
                 
                 channel?.enter(completionHandler: { (error) in
                     if error != nil {
@@ -187,7 +192,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
             
             //Send message
-            SBDOpenChannel.getWithUrl(CHANNEL_URL) { (channel, error) in
+            SBDOpenChannel.getWithUrl(channelURL) { (channel, error) in
                 if error != nil {
                     print("Three")
                     NSLog("Error: %@", error!)
